@@ -9,14 +9,45 @@
 
 clc
 clear
-drawLunKuoLines('日丰-锯齿-左上.jpg');
-drawLunKuoLines('日丰-锯齿-右上.jpg');
+newpointLine11 = drawLunKuoLines('日丰-锯齿-左上.jpg');
+newpointLine12 = drawLunKuoLines('日丰-锯齿-右上.jpg');
+%%%%%%%%%%%%%%%%%%%%%%%修缮日丰商标中部区域轮廓线的排序方法！！！！
+newpointLine21 = drawLunKuoLines('日丰-锯齿-中左.jpg');
+figure;
+plot(newpointLine21(:,1),newpointLine21(:,2),'r.')
+grid on;
+hold on;
+plot(newpointLine21(1,1),newpointLine21(1,2),'r*')
+grid on;
+hold on;
+plot(newpointLine21(:,1),newpointLine21(:,2),'b-')
+title(['日丰-锯齿-中左.jpg','    轮廓线绘制图']);
+xlabel('x');
+xlabel('y');
+%%%%%%%%%%%%%%%%%%%%%%%%
+newpointLine22 = drawLunKuoLines('日丰-锯齿-中右.jpg');
+figure;
+plot(newpointLine22(:,1),newpointLine22(:,2),'r.')
+grid on;
+hold on;
+plot(newpointLine22(1,1),newpointLine22(1,2),'r*')
+grid on;
+hold on;
+plot(newpointLine22(:,1),newpointLine22(:,2),'b-')
+title(['日丰-锯齿-中右.jpg','    轮廓线绘制图']);
+xlabel('x');
+xlabel('y');
+%%%%%%%%%%%%%%%%%%%%%%%
+newpointLine31 = drawLunKuoLines('日丰-锯齿-左下.jpg');
+newpointLine32 = drawLunKuoLines('日丰-锯齿-右下.jpg');
 
-drawLunKuoLines('日丰-锯齿-中左.jpg');
-drawLunKuoLines('日丰-锯齿-中右.jpg');
 
-drawLunKuoLines('日丰-锯齿-左下.jpg');
-drawLunKuoLines('日丰-锯齿-右下.jpg');
+
+
+
+
+
+
 
 %imshow(data);
 [X,Y]=getCoordinate(data);%获取坐标函数

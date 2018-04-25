@@ -1,8 +1,12 @@
-function  drawLunKuoLines(str)
+function  newpointLine = drawLunKuoLines(str)
 %UNTITLED17 此处显示有关此函数的摘要
 %   此处显示详细说明
 
 %imshow(data);
+
+
+% str='日丰-锯齿-中右.jpg';
+
 data = imread(str);
 % data2 = data
 [X,Y]=getCoordinate(data);%获取坐标函数
