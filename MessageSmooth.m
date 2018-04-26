@@ -20,9 +20,6 @@ xlabel('t');  % 为X轴加标签
 ylabel('moving');  % 为Y轴加标签
 legend('轮廓线波形','平滑后波形');
 title('移动平均法对加噪信号进行平滑处理，绘制平滑波形图');
-
-
-
 %*****************产生加噪正弦波信号，绘制加噪波形图*************************
 t = linspace(0,2*pi,500)';  % 产生一个从0到2*pi的向量，长度为500
 y = 100*sin(t);  % 产生正弦波信号
@@ -43,8 +40,6 @@ plot(t,yy1,'k','linewidth',3);  % 绘制平滑后波形图
 xlabel('t');  % 为X轴加标签
 ylabel('moving');  % 为Y轴加标签
 legend('加噪波形','平滑后波形');
-
-
 %*************利用lowess方法对加噪信号进行平滑处理，绘制平滑波形图*************
 yy2 = smooth(y,30,'lowess');  % 利用lowess方法对y进行平滑处理
 figure;  % 新建一个图形窗口
@@ -55,8 +50,6 @@ plot(t,yy2,'k','linewidth',3);  % 绘制平滑后波形图
 xlabel('t');  % 为X轴加标签
 ylabel('lowess');  % 为Y轴加标签
 legend('加噪波形','平滑后波形');
-
-
 %*************利用rlowess方法对加噪信号进行平滑处理，绘制平滑波形图************
 yy3 = smooth(y,30,'rlowess');  % 利用rlowess方法对y进行平滑处理
 figure;  % 新建一个图形窗口
@@ -67,8 +60,6 @@ plot(t,yy3,'k','linewidth',3);  % 绘制平滑后波形图
 xlabel('t');  % 为X轴加标签
 ylabel('rlowess');  % 为Y轴加标签
 legend('加噪波形','平滑后波形');
-
-
 %*************利用loess方法对加噪信号进行平滑处理，绘制平滑波形图*************
 yy4 = smooth(y,30,'loess');  % 利用loess方法对y进行平滑处理
 figure;  % 新建一个图形窗口
@@ -79,8 +70,6 @@ plot(t,yy4,'k','linewidth',3);  % 绘制平滑后波形图
 xlabel('t');  % 为X轴加标签
 ylabel('loess');  % 为Y轴加标签
 legend('加噪波形','平滑后波形');
-
-
 %*************利用sgolay方法对加噪信号进行平滑处理，绘制平滑波形图*************
 yy5 = smooth(y,30,'sgolay',3);  % 利用sgolay方法对y进行平滑处理
 figure;  % 新建一个图形窗口
