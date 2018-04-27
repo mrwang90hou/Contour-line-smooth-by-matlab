@@ -41,14 +41,6 @@ xlabel('y');
 newpointLine31 = drawLunKuoLines('日丰-锯齿-左下.jpg');
 newpointLine32 = drawLunKuoLines('日丰-锯齿-右下.jpg');
 
-
-
-
-
-
-
-
-
 %imshow(data);
 [X,Y]=getCoordinate(data);%获取坐标函数
 total =[X,-Y];
