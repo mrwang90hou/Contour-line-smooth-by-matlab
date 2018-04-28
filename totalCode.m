@@ -107,10 +107,10 @@ while ~isempty(total)
         %列出（x,y）周围8点坐标，从而标出取点顺序【顺时针】：（x,y+1）->(x-1,y+1)
         judgeArray = getJudgeArray(x,y);
         sameRow = ismember(judgeArray,total(a3,:),'rows');%元素相同的行
-        finalArray = judgeArray(find(sameRow),:);
+        finalArray = judgeArray(sameRow,:);
 %         [~,q,~] = find(a3 == max(total(a3,:));
         newPoint = finalArray(1,:);
-        r = find(ismember(total,newPoint,'rows'))
+        r = find(ismember(total,newPoint,'rows'));
         total(r(1),:) = [];
     else%m=1
         newPoint = total(a3,:);
@@ -152,7 +152,23 @@ plot(X,-Y,'r.');
 grid on;
 hold on;
 plot(newpointLine(:,1),newpointLine(:,2),'b-')
-% 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+str='日丰-锯齿-左上.jpg';
+data = imread(str);
+gdata=rgb2gray(data);
+
+imshow(gdata);
+BW = edge(gdata,'prewitt');
+
+figure;
+imshow(~BW);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 % 
 % 
 % a = [3,0];%任意数1，x,y坐标

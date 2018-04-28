@@ -1,9 +1,9 @@
 clc
 clear
-data=imread('ÈÕ·á-¾â³İ.jpg');
+data=imread('ÈÕ·á-¾â³İ-×óÉÏ.jpg');
 gdata=rgb2gray(data);
 BW1 = edge(gdata,'prewitt');
-% colormap(flipud(BW1));
+colormap(flipud(BW1));
 figure;
 %BW1 = abs(BW1-1);
 imshow(BW1);
