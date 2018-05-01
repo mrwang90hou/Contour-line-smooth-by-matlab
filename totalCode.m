@@ -155,15 +155,15 @@ plot(newpointLine(:,1),newpointLine(:,2),'b-')
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-str='ÈÕ·á-¾â³Ý-×óÉÏ.jpg';
+str='ÈÕ·á.jpg';
 data = imread(str);
 gdata=rgb2gray(data);
 
-imshow(gdata);
+% imshow(gdata);
 BW = edge(gdata,'prewitt');
 
 figure;
-imshow(~BW);
+imshow(~BW);%Í¼ÏñºÚ°×·­×ª
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
